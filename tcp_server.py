@@ -20,7 +20,7 @@ def main():
         handler.start() # Create and start Thread object that handle connection via handle_client_cont with argument client
         
 
-def handle_client_conn(client):
+def handle_client_conn(client): # Handle Client Request
     with client as sock:
         req = sock.recv(4096)
         print(f'[*] Received : {req.decode("utf-8")}')
